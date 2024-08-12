@@ -5,3 +5,6 @@ az policy definition create --name tagging-policy --rules 'tagging-policy.json' 
 
 Apply tagging policy (use your own <subsID>):
 az policy assignment create --policy tagging-policy --name tagging-policy --scope /subscriptions/<SubscriptionID>
+
+Listing the policy created:
+az policy assignment list --query "[?name=='tagging-policy']"
